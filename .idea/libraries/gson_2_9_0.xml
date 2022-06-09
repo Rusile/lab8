@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="gson-2.9.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/gson-2.9.0.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/json-20211205.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/validation-api-2.0.1.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/hibernate-validator-6.2.3.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/javax.el-3.0.1-b10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

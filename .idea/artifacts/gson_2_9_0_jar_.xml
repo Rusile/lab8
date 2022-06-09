@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact name="gson-2_9_0_jar_">
+    <output-path>$PROJECT_DIR$/out/artifacts/gson_2_9_0_jar_</output-path>
+    <root id="root">
+      <element id="module-output" name="lab-client" />
+      <element id="module-output" name="lab-common" />
+    </root>
+  </artifact>
+</component>
