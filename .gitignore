@@ -1,3 +1,5 @@
 /lab-server/target/
 /lab-client/target/
 /target/
+*/target/
+lab-common/target

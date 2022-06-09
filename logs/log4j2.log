@@ -97,3 +97,14 @@
 2022-05-31 09:56:10,613 ERROR R.s.ServerConfig [pool-3-thread-2] Problem with response serializing or sending
 2022-05-31 09:56:10,653 ERROR R.s.ServerConfig [Thread-5] Invalid input!
 2022-05-31 13:30:27,851 ERROR R.s.ServerConfig [main] Error occurred during initializing tables!Ошибка при попытке подсоединения.
+2022-06-09 15:51:33,629 ERROR R.s.ServerConfig [main] Error occurred during initializing tables!The connection attempt failed.
+2022-06-09 15:52:30,498 INFO R.s.ServerConfig [main] Socket opened
+2022-06-09 15:52:36,091 INFO R.s.ServerConfig [main] Server started
+2022-06-09 15:52:36,092 INFO R.s.ServerConfig [Thread-5] Console thread is running
+2022-06-09 15:52:41,188 INFO R.s.ServerConfig [Thread-5] Server closed
+2022-06-09 15:53:26,177 INFO R.s.ServerConfig [main] Socket opened
+2022-06-09 15:53:29,075 INFO R.s.ServerConfig [main] Server started
+2022-06-09 15:53:29,076 INFO R.s.ServerConfig [Thread-5] Console thread is running
+2022-06-09 15:53:38,742 INFO R.s.ServerConfig [main] Socket opened
+2022-06-09 15:53:39,749 INFO R.s.ServerConfig [main] Server started
+2022-06-09 15:53:39,749 INFO R.s.ServerConfig [Thread-5] Console thread is running
