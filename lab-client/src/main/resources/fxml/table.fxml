@@ -8,33 +8,34 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane fx:id="visualizationPane" prefHeight="740.0" prefWidth="1236.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="Rusile.client.controllers.TableController">
+<Pane fx:id="visualizationPane" prefHeight="740.0" prefWidth="1236.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Rusile.client.controllers.TableController">
    <children>
       <FlowPane fx:id="filterPane" alignment="TOP_CENTER" columnHalignment="CENTER" layoutX="27.0" layoutY="58.0" prefHeight="68.0" prefWidth="1211.0">
          <children>
-            <TextField fx:id="idFilter" text="Id filter" />
-            <TextField fx:id="nameFilter" text="Name filter" />
-            <TextField text="X filter" fx:id="xFilter" />
+            <TextField fx:id="idFilter" promptText="%main_menu.table_filter.id" />
+            <TextField fx:id="nameFilter" promptText="%main_menu.table_filter.name" />
+            <TextField promptText="%main_menu.table_filter.X" fx:id="xFilter" />
+            <TextField fx:id="yFilter" promptText="%main_menu.table_filter.Y" />
             <ChoiceBox fx:id="dateFilter" prefWidth="150.0" />
-            <TextField fx:id="heightFilter" text="Height filter" />
+            <TextField fx:id="heightFilter" promptText="%main_menu.table_filter.number" />
             <ChoiceBox fx:id="eyeColorFilter" prefWidth="150.0" />
             <ChoiceBox fx:id="hairColorFilter" prefWidth="150.0" />
-            <Button fx:id="applyFilter" mnemonicParsing="false" prefHeight="13.0" prefWidth="137.0" style="-fx-background-color: rgb(46,51,72);" text="Filter" />
             <ChoiceBox fx:id="nationalityFilter" prefWidth="150.0" />
             <TextField text="X loc filter" fx:id="xLocationFilter" />
             <TextField fx:id="yLocationFilter" text="Y loc filter" />
             <TextField fx:id="zLocationFilter" text="Z loc filter" />
-            <TextField fx:id="nameLocationFilter" text="Name loc filter" />
+            <TextField fx:id="nameLocationFilter" promptText="%main_menu.table_filter.name" />
+            <Button fx:id="applyFilter" mnemonicParsing="false" prefHeight="13.0" prefWidth="137.0" style="-fx-background-color: rgb(46,51,72);" text="%main_menu.table_filter.address" textFill="WHITE" />
          </children>
       </FlowPane>
       <TableView fx:id="mainTable" layoutX="1.0" layoutY="126.0" prefHeight="620.0" prefWidth="1235.0">
          <columns>
-            <TableColumn fx:id="id" prefWidth="46.0" text="C1" />
-            <TableColumn fx:id="name" minWidth="0.0" prefWidth="178.0" text="C2" />
-            <TableColumn fx:id="coordinates" prefWidth="139.0" text="C2">
+            <TableColumn fx:id="id" prefWidth="46.0" text="%main_menu.table.id" />
+            <TableColumn fx:id="name" minWidth="0.0" prefWidth="178.0" text="%main_menu.table.name" />
+            <TableColumn fx:id="coordinates" prefWidth="139.0" text="%main_menu.table.coordinates">
                <columns>
-                  <TableColumn fx:id="location1" prefWidth="60.0" text="C2" />
-                  <TableColumn fx:id="location2" prefWidth="60.0" text="C2" />
+                  <TableColumn fx:id="xCoordinate" prefWidth="60.0" text="%main_menu.table.X" />
+                  <TableColumn fx:id="yCoordinate" prefWidth="60.0" text="%main_menu.table.Y" />
                </columns>
             </TableColumn>
             <TableColumn fx:id="date" prefWidth="124.0" text="C2" />
