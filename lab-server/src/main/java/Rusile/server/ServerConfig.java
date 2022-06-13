@@ -22,9 +22,9 @@ public class ServerConfig {
     public static final Scanner scanner = new Scanner(System.in);
     public static CollectionManager collectionManager = new CollectionManager();
     public static int PORT = 45846;
-//    public static DBSSHConnector dbsshConnector = new DBSSHConnector();
-//    public static DBManager dbManager = new DBManager(dbsshConnector);
-    public static DBManager dbManager = new DBManager(new DBLocalConnector());
+    public static DBSSHConnector dbsshConnector = new DBSSHConnector();
+    public static DBManager dbManager = new DBManager(dbsshConnector);
+    //public static DBManager dbManager = new DBManager(new DBLocalConnector());
     public static UsersManager usersManager = new UsersManager(dbManager);
 
     static {

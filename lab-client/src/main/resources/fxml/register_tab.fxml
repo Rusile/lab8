@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FAFAFA;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Rusile.client.controllers.RegistrationController">
+   <children>
+      <AnchorPane layoutX="300.0" layoutY="47.0" prefHeight="130.0" prefWidth="800.0" style="-fx-background-color: #2E3348;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="217.0" layoutY="51.0" text="Registration" textFill="#fafafa" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="217.0" AnchorPane.rightAnchor="216.0" AnchorPane.topAnchor="51.0">
+               <font>
+                  <Font name="Segoe UI Bold Italic" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="register_button" layoutX="150.0" layoutY="301.0" mnemonicParsing="false" onAction="#registerAction" text="Register" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="390.0" AnchorPane.topAnchor="301.0" />
+      <TextField fx:id="login_field" alignment="CENTER" layoutX="150.0" layoutY="152.0" minHeight="20.0" minWidth="100.0" prefHeight="30.0" prefWidth="300.0" promptText="Login" AnchorPane.bottomAnchor="218.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="152.0" />
+      <PasswordField fx:id="first_password_field" alignment="CENTER" layoutX="150.0" layoutY="200.0" prefHeight="30.0" prefWidth="300.0" promptText="Password" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="200.0" />
+      <ChoiceBox fx:id="language_selector" layoutX="225.0" layoutY="347.0" prefWidth="150.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="347.0" />
+      <PasswordField fx:id="second_password_field" alignment="CENTER" layoutX="150.0" layoutY="250.0" prefHeight="30.0" prefWidth="300.0" promptText="Password" />
+      <Button fx:id="login_button" layoutX="390.0" layoutY="301.0" mnemonicParsing="false" onAction="#loginAction" text="%login_menu.button.login" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="390.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="301.0" />
+   </children>
+</AnchorPane>

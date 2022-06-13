@@ -1,4 +1,4 @@
-package Rusile.client.NetworkManager;
+package Rusile.client.networkManager;
 
 import Rusile.client.CommandDispatcher.AvailableCommands;
 import Rusile.client.CommandDispatcher.CommandToSend;

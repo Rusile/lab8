@@ -41,7 +41,7 @@ public class DBSSHConnector implements DBConnectable {
 //            this.svPass = System.getenv("SV_PASS");
 //            this.svAddr = System.getenv("SV_ADDR");
 //            this.forwardingPort = Integer.parseInt(System.getenv("FORWARDING_PORT"));
-            forwardingPort = 4375;
+            forwardingPort = 4975;
             connectSSH();
             Class.forName("org.postgresql.Driver");
             initializeDB();
