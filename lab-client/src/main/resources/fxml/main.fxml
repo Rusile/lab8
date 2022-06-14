@@ -63,26 +63,26 @@
                   </TableView>
                </children>
             </Pane>
-            <Button fx:id="switchButton" layoutX="1275.0" layoutY="106.0" mnemonicParsing="false" onAction="#switchView" prefHeight="42.0" prefWidth="150.0" text="\%main_switchButton" />
+            <Button fx:id="switchButton" layoutX="1275.0" layoutY="106.0" mnemonicParsing="false" onAction="#switchView" prefHeight="42.0" prefWidth="150.0" text="%main_menu.button.switch_to_visual" />
             <VBox layoutX="5.0" layoutY="272.0" prefHeight="257.0" prefWidth="185.0" spacing="15.0">
                <children>
-                  <Button fx:id="removeByIdButton" mnemonicParsing="false" onAction="#removeById" prefHeight="50.0" prefWidth="150.0" text="\%main_menu.removeByIdButton" />
-                  <Button fx:id="removeLowerButton" mnemonicParsing="false" onAction="#removeLower" prefHeight="50.0" prefWidth="150.0" text="\%main_menu.removeLowerButton" />
-                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#addAction" prefHeight="50.0" prefWidth="152.0" text="\%main_menu.command_button.add">
+                  <Button fx:id="removeByIdButton" mnemonicParsing="false" onAction="#removeById" prefHeight="50.0" prefWidth="150.0" text="%main_menu.command_button.remove.remove_id" />
+                  <Button fx:id="removeLowerButton" mnemonicParsing="false" onAction="#removeLower" prefHeight="50.0" prefWidth="150.0" text="%main_menu.command_button.remove_button" />
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#addAction" prefHeight="50.0" prefWidth="152.0" text="%main_menu.command_button.add">
                      <font>
                         <Font name="Segoe UI" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" prefHeight="50.0" prefWidth="150.0" text="\%main_menu.clearButton" />
-                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="50.0" prefWidth="150.0" text="\%main_menu.exitButton" />
+                  <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" prefHeight="50.0" prefWidth="150.0" text="%main_menu.button.clear" />
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="50.0" prefWidth="150.0" text="%main_menu.command_button.exit" />
                </children>
             </VBox>
-            <Button fx:id="logoutButton" layoutX="1087.0" layoutY="106.0" mnemonicParsing="false" onAction="#logout" prefHeight="42.0" prefWidth="150.0" text="\%main_menu.rlogoutButton" />
+            <Button fx:id="logoutButton" layoutX="1087.0" layoutY="106.0" mnemonicParsing="false" onAction="#logout" prefHeight="42.0" prefWidth="150.0" text="%main_menu.command_button.logout" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="90.0" prefWidth="1440.0" style="-fx-background-color: #0E3348;" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" layoutX="706.0" layoutY="37.0" prefHeight="90.0" prefWidth="1440.0" text="\%main.title" textFill="#fafafa" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Label alignment="CENTER" layoutX="706.0" layoutY="37.0" prefHeight="90.0" prefWidth="1440.0" text="%main_menu.command_button.info" textFill="#fafafa" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <font>
                   <Font name="Segoe UI Bold Italic" size="24.0" />
                </font>

@@ -33,7 +33,8 @@ public class TableModel extends AbstractModel {
         try {
             ObservableList<TableRow> tableRows = FXCollections.observableArrayList();
             Request request = new Request("show", RequestType.COMMAND);
-            request.setLogin(session.getUsername()); request.setPassword(session.getPassword());
+            request.setLogin(session.getUsername());
+            request.setPassword(session.getPassword());
             getClientSocketChannelIO().send(request);
             Response response = (Response) getClientSocketChannelIO().receive();
             //response.getCollectionToResponse().forEach(System.out::println);
@@ -60,6 +61,24 @@ public class TableModel extends AbstractModel {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public void startPolling() {
+        Thread thread = new Thread(() -> {
+            while (true) {
+                try {
+                    Thread.sleep(30 * 100);
+//                    System.out.println("got data");
+                    tableController.setTableRows(fillTableWithRemoteData());
+                    tableController.updateFilteredData();
+                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+                }
+
+            }
+        });
+        thread.start();
+
     }
 }
 

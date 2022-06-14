@@ -31,7 +31,7 @@ public class App extends Application {
         primaryStage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/ITMO_LGBT.png"))));
         primaryStage.setTitle(loader.getResources().getString("app.menu"));
         primaryStage.setScene(scene);
-        primaryStage.setResizable(false);
+        primaryStage.setResizable(true);
         primaryStage.sizeToScene();
         primaryStage.show();
     }

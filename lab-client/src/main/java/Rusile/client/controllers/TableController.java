@@ -126,6 +126,13 @@ public class TableController extends AbstractDataController implements Initializ
     private ObservableList<TableRow> masterData = FXCollections.observableArrayList();
     private final Session session;
 
+    public ObservableList<TableRow> getTableRows() {
+        return tableRows;
+    }
+
+    public void setTableRows(ObservableList<TableRow> tableRows) {
+        this.tableRows = tableRows;
+    }
 
     public TableController(ClientSocketChannelIO socketChannelIO, Session session, MainController mainController) {
         super(mainController);
@@ -191,9 +198,10 @@ public class TableController extends AbstractDataController implements Initializ
         setDoubleFilter(xLocationFilter);
         setDoubleFilter(yLocationFilter);
 
+        tableModel.startPolling();
     }
 
-    private void updateFilteredData() {
+    public void updateFilteredData() {
         masterData.clear();
 //        System.out.println(eyeColorFilter.getValue() + hairColorFilter.getValue() + nationalityFilter.getValue());
         tableRows.stream().
