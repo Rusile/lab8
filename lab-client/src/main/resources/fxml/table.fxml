@@ -16,14 +16,13 @@
             <TextField fx:id="nameFilter" promptText="%main_menu.table_filter.name" />
             <TextField promptText="%main_menu.table_filter.X" fx:id="xFilter" />
             <TextField fx:id="yFilter" promptText="%main_menu.table_filter.Y" />
-            <ChoiceBox fx:id="dateFilter" prefWidth="150.0" />
             <TextField fx:id="heightFilter" promptText="%main_menu.table_filter.number" />
             <ChoiceBox fx:id="eyeColorFilter" prefWidth="150.0" />
             <ChoiceBox fx:id="hairColorFilter" prefWidth="150.0" />
             <ChoiceBox fx:id="nationalityFilter" prefWidth="150.0" />
-            <TextField text="X loc filter" fx:id="xLocationFilter" />
-            <TextField fx:id="yLocationFilter" text="Y loc filter" />
-            <TextField fx:id="zLocationFilter" text="Z loc filter" />
+            <TextField promptText="%add_menu.text_field.X" fx:id="xLocationFilter" />
+            <TextField fx:id="yLocationFilter" promptText="%add_menu.text_field.Y" />
+            <TextField fx:id="zLocationFilter" promptText="%add_menu.text.number_of_participants" />
             <TextField fx:id="nameLocationFilter" promptText="%main_menu.table_filter.name" />
             <Button fx:id="applyFilter" mnemonicParsing="false" prefHeight="13.0" prefWidth="137.0" style="-fx-background-color: rgb(46,51,72);" text="%main_menu.table_filter.address" textFill="WHITE" />
          </children>
@@ -34,23 +33,23 @@
             <TableColumn fx:id="name" minWidth="0.0" prefWidth="178.0" text="%main_menu.table.name" />
             <TableColumn fx:id="coordinates" prefWidth="139.0" text="%main_menu.table.coordinates">
                <columns>
-                  <TableColumn fx:id="xCoordinate" prefWidth="60.0" text="%main_menu.table.X" />
+                  <TableColumn prefWidth="60.0" text="%main_menu.table.X" fx:id="xCoordinate" />
                   <TableColumn fx:id="yCoordinate" prefWidth="60.0" text="%main_menu.table.Y" />
                </columns>
             </TableColumn>
-            <TableColumn fx:id="date" prefWidth="124.0" text="C2" />
-            <TableColumn fx:id="eyeColor" minWidth="9.0" prefWidth="147.0" text="C2" />
-            <TableColumn fx:id="hairColor" prefWidth="146.0" text="C2" />
-            <TableColumn fx:id="nationality" prefWidth="114.0" text="C2" />
-            <TableColumn fx:id="location" prefWidth="269.0" text="C2">
+            <TableColumn fx:id="date" prefWidth="124.0" text="%main_menu.table.creation_date" />
+            <TableColumn fx:id="eyeColor" minWidth="9.0" prefWidth="147.0" text="%main_menu.table.number_of_participants" />
+            <TableColumn fx:id="hairColor" prefWidth="146.0" text="%main_menu.table.description" />
+            <TableColumn fx:id="nationality" prefWidth="114.0" text="%main_menu.table.genre" />
+            <TableColumn fx:id="location" prefWidth="269.0" text="%main_menu.table.studio_address">
                <columns>
-                  <TableColumn fx:id="locationX" prefWidth="54.0" text="C2" />
-                  <TableColumn fx:id="locationY" prefWidth="54.0" text="C2" />
-                  <TableColumn fx:id="locationZ" prefWidth="54.0" text="C2" />
-                  <TableColumn fx:id="locationName" prefWidth="107.0" text="C2" />
+                  <TableColumn fx:id="locationX" prefWidth="54.0" text="%main_menu.table.X" />
+                  <TableColumn fx:id="locationY" prefWidth="54.0" text="%main_menu.table.Y" />
+                  <TableColumn fx:id="locationZ" prefWidth="54.0" text="%add_menu.text.coordinates" />
+                  <TableColumn fx:id="locationName" prefWidth="107.0" text="%main_menu.table.name" />
                </columns>
             </TableColumn>
-            <TableColumn fx:id="height" prefWidth="98.0" text="C2" />
+            <TableColumn fx:id="height" prefWidth="98.0" text="%add_menu.text.description" />
          </columns>
       </TableView>
    </children>

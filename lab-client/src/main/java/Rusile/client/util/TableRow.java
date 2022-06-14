@@ -62,7 +62,7 @@ public class TableRow {
         return x.get();
     }
 
-    public FloatProperty xProperty() {
+    public LongProperty xProperty() {
         return x;
     }
 
@@ -74,11 +74,11 @@ public class TableRow {
         return y;
     }
 
-    public ZonedDateTime getCreationDate() {
+    public LocalDateTime getCreationDate() {
         return creationDate.get();
     }
 
-    public ObjectProperty<ZonedDateTime> creationDateProperty() {
+    public ObjectProperty<LocalDateTime> creationDateProperty() {
         return creationDate;
     }
 
@@ -114,27 +114,27 @@ public class TableRow {
         return nationality;
     }
 
-    public float getLocationX() {
+    public double getLocationX() {
         return locationX.get();
     }
 
-    public FloatProperty locationXProperty() {
+    public DoubleProperty locationXProperty() {
         return locationX;
     }
 
-    public float getLocationY() {
+    public double getLocationY() {
         return locationY.get();
     }
 
-    public FloatProperty locationYProperty() {
+    public DoubleProperty locationYProperty() {
         return locationY;
     }
 
-    public float getLocationZ() {
+    public int getLocationZ() {
         return locationZ.get();
     }
 
-    public FloatProperty locationZProperty() {
+    public IntegerProperty locationZProperty() {
         return locationZ;
     }
 
