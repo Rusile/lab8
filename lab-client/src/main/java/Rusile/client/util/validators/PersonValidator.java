@@ -11,7 +11,7 @@ public class PersonValidator {
 
     private static String validateName(String name) throws IllegalArgumentException {
         if (name.length() < 5)
-            throw new IllegalArgumentException("person_exception.name_lenght");
+            throw new IllegalArgumentException("band_exception.name_length");
         return name;
     }
 
@@ -20,10 +20,10 @@ public class PersonValidator {
         try {
             x = Long.parseLong(strX);
         } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("person_exception.coordX_number");
+            throw new IllegalArgumentException("band_exception.x_number");
         }
         if (x < 0 || x > 416)
-            throw new IllegalArgumentException("person_exception.coordX_range");
+            throw new IllegalArgumentException("band_exception.x_range");
         return x;
     }
 
@@ -32,31 +32,21 @@ public class PersonValidator {
         try {
             y = Float.parseFloat(strY);
         } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("person_exception.coordY_number");
+            throw new IllegalArgumentException("band_exception.y_number");
         }
         if (y < 0 || y > 416)
-            throw new IllegalArgumentException("person_exception.coordY_range");
+            throw new IllegalArgumentException("band_exception.y_range");
         return y;
     }
 
-    private static int validateHeight(String strHeight) throws IllegalArgumentException {
-        int height;
-        try {
-            height = Integer.parseInt(strHeight);
-        } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("person_exception.height_number");
-        }
-        if (height < 0 || height > 250)
-            throw new IllegalArgumentException("person_exception.height_range");
-        return height;
-    }
+
 
     private static double validateLocX(String strX) throws IllegalArgumentException {
         double x;
         try {
             x = Double.parseDouble(strX);
         } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("person_exception.locX_number");
+            throw new IllegalArgumentException("band_exception.x_range");
         }
         return x;
     }
@@ -66,7 +56,7 @@ public class PersonValidator {
         try {
             y = Double.parseDouble(strY);
         } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("person_exception.locY_number");
+            throw new IllegalArgumentException("band_exception.x_range");
         }
         return y;
     }
@@ -76,7 +66,7 @@ public class PersonValidator {
         try {
             z = Integer.parseInt(strZ);
         } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("person_exception.locZ_number");
+            throw new IllegalArgumentException("band_exception.x_range");
         }
         return z;
     }
@@ -140,5 +130,15 @@ public class PersonValidator {
         }
 
         return errorList;
+    }
+
+    private static void validateHeight(String height) {
+        int y;
+        try {
+            y = Integer.parseInt(height);
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("band_exception.x_range");
+        }
+//        return y;
     }
 }

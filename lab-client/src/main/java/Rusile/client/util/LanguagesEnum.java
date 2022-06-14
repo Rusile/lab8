@@ -9,7 +9,7 @@ public enum LanguagesEnum {
 
     private final String name;
     private final String languageName;
-
+    public static LanguagesEnum lg = LanguagesEnum.ENGLISH;
     LanguagesEnum(String name, String languageName) {
         this.name = name;
         this.languageName = languageName;

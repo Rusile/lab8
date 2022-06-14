@@ -29,6 +29,9 @@ public class ConnectionController extends AbstractController implements Initiali
 
     private final ConnectionModel connectionModel;
 
+//    private LanguagesEnum lg = LanguagesEnum.ENGLISH;
+
+
     public ConnectionController(ClientSocketChannelIO clientSocketChannelIO) {
         connectionModel = new ConnectionModel(clientSocketChannelIO, getCurrentStage(), this);
     }
@@ -53,13 +56,13 @@ public class ConnectionController extends AbstractController implements Initiali
         setResourceBundle(resources);
         addRegex(port_field);
         language_selector.setItems(FXCollections.observableArrayList(Stream.of(LanguagesEnum.values()).collect(Collectors.toList())));
-        language_selector.setValue(connectionModel.getLanguage(getResourceBundle().getLocale().getLanguage()));
+        language_selector.setValue(LanguagesEnum.lg);
         language_selector.getSelectionModel().selectedItemProperty().addListener((m, oldValue, newValue) -> {
             try {
+                LanguagesEnum.lg = newValue;
                 setResourceBundle(ResourceBundle.getBundle("localization.locale", new Locale(newValue.getLanguageName())));
                 switchScene(PathToViews.CONNECTION_VIEW,
                         param -> new ConnectionController(connectionModel.getClientSocketChannelIO()), getResourceBundle());
-                language_selector.setValue(newValue);
             } catch (ExceptionWithAlert e) {
                 e.showAlert();
             }

@@ -31,6 +31,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.stream.Collectors;
 
 public class MainModel extends AbstractModel {
 
@@ -86,6 +87,20 @@ public class MainModel extends AbstractModel {
                 });
     }
 
+
+    public Set<Person> getPersons() {
+        try {
+            Request request = new Request("show", RequestType.COMMAND);
+            request.setLogin(session.getUsername());
+            request.setPassword(session.getPassword());
+            getClientSocketChannelIO().send(request);
+            Response response = (Response) getClientSocketChannelIO().receive();
+            return new HashSet<>(response.getCollectionToResponse());
+        }
+        catch (Exception e) {
+            return null;
+        }
+    }
 //    public void getNewCollection() {
 //        Task<Response> task = generateUpdateTask();
 //        task.setOnSucceeded(event -> {

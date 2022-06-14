@@ -43,6 +43,7 @@ public class UpdateByIdCommand extends AbstractCommand {
                 return new Response("Login and password mismatch");
             }
         } catch (DatabaseException e) {
+            e.printStackTrace();
             return new Response(e.getMessage());
         }
     }

@@ -4,15 +4,16 @@ import Rusile.client.models.TableModel;
 import Rusile.client.networkManager.ClientSocketChannelIO;
 import Rusile.client.util.Session;
 import Rusile.client.util.TableRow;
-import Rusile.common.people.Color;
-import Rusile.common.people.Country;
-import Rusile.common.people.Person;
+import Rusile.common.people.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 
@@ -198,7 +199,22 @@ public class TableController extends AbstractDataController implements Initializ
         setDoubleFilter(xLocationFilter);
         setDoubleFilter(yLocationFilter);
 
-        tableModel.startPolling();
+        if (!tableModel.isPolling()) {
+            tableModel.setPolling(true);
+            tableModel.startPolling();
+        }
+
+        mainTable.setOnMouseClicked(event -> {
+            if(event.getButton().equals(MouseButton.PRIMARY)){
+                if (event.getClickCount() == 2) {
+                    TableRow tableRow = mainTable.getSelectionModel().getSelectedItem();
+                    getMainController().getMainModel().showInfoElement(new Person((long) tableRow.getId(), tableRow.getName(), new Coordinates((long) tableRow.getX(),tableRow.getY()),
+                            LocalDateTime.now(), tableRow.getHeight(), tableRow.getEyeColor(), tableRow.getHairColor(),
+                            tableRow.getNationality(), new Location(tableRow.getLocationX(), tableRow.getLocationY(), tableRow.getLocationZ(),
+                            tableRow.getLocationName())));
+                }
+            }
+        });
     }
 
     public void updateFilteredData() {

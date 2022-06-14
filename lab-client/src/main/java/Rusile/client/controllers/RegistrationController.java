@@ -94,13 +94,13 @@ public class RegistrationController extends AbstractController implements Initia
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setResourceBundle(resourceBundle);
         language_selector.setItems(FXCollections.observableArrayList(Stream.of(LanguagesEnum.values()).collect(Collectors.toList())));
-        language_selector.setValue(registrationModel.getLanguage(getResourceBundle().getLocale().getLanguage()));
+        language_selector.setValue(LanguagesEnum.lg);
         language_selector.getSelectionModel().selectedItemProperty().addListener((m, oldValue, newValue) -> {
             try {
                 setResourceBundle(ResourceBundle.getBundle("localization.locale", new Locale(newValue.getLanguageName())));
+                LanguagesEnum.lg = newValue;
                 switchScene(PathToViews.REGISTRATION_VIEW,
                         param -> new RegistrationController(registrationModel.getClientSocketChannelIO()), getResourceBundle());
-                language_selector.setValue(newValue);
             } catch (ExceptionWithAlert e) {
                 e.showAlert();
             }

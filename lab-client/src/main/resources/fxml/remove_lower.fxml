@@ -11,24 +11,24 @@
    <children>
       <AnchorPane prefHeight="67.0" prefWidth="600.0" style="-fx-background-color: #2E3348;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label fx:id="removeLower_title" layoutX="255.0" layoutY="22.0" text="\\%removeLower_title" textFill="#fafafa" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="255.0" AnchorPane.topAnchor="22.0">
+            <Label fx:id="removeLower_title" layoutX="255.0" layoutY="22.0" text="%remove_by_id.button.remove" textFill="#fafafa" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="255.0" AnchorPane.topAnchor="22.0">
                <font>
                   <Font name="Segoe UI Bold Italic" size="18.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <TextField fx:id="name_field" layoutX="226.0" layoutY="98.0" promptText="\%name_field" AnchorPane.bottomAnchor="277.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="98.0" />
-      <TextField fx:id="locationName_field" layoutX="47.0" layoutY="98.0" prefHeight="25.0" prefWidth="149.0" promptText="\%locationName_field" AnchorPane.bottomAnchor="277.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="414.0" AnchorPane.topAnchor="98.0" />
-      <TextField fx:id="coordinatesX_field" layoutX="226.0" layoutY="150.0" promptText="\%coordinatesX_field" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="150.0" />
-      <TextField fx:id="coordinatesY_field" layoutX="226.0" layoutY="201.0" promptText="\%coordinatesY_field" AnchorPane.bottomAnchor="174.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="201.0" />
-      <TextField fx:id="height_field" layoutX="414.0" layoutY="98.0" promptText="\%height_field" AnchorPane.bottomAnchor="277.0" AnchorPane.leftAnchor="414.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="98.0" />
+      <TextField fx:id="name_field" layoutX="226.0" layoutY="98.0" promptText="%main_menu.table.name" AnchorPane.bottomAnchor="277.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="98.0" />
+      <TextField fx:id="locationName_field" layoutX="47.0" layoutY="98.0" prefHeight="25.0" prefWidth="149.0" promptText="%main_menu.table.name" AnchorPane.bottomAnchor="277.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="414.0" AnchorPane.topAnchor="98.0" />
+      <TextField fx:id="coordinatesX_field" layoutX="226.0" layoutY="150.0" promptText="%main_menu.table.X" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="150.0" />
+      <TextField fx:id="coordinatesY_field" layoutX="226.0" layoutY="201.0" promptText="%main_menu.table.Y" AnchorPane.bottomAnchor="174.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="201.0" />
+      <TextField fx:id="height_field" layoutX="414.0" layoutY="98.0" promptText="%add_menu.text.description" AnchorPane.bottomAnchor="277.0" AnchorPane.leftAnchor="414.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="98.0" />
       <ChoiceBox fx:id="hair_selector" layoutX="414.0" layoutY="251.0" prefWidth="150.0" AnchorPane.bottomAnchor="124.0" AnchorPane.leftAnchor="414.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="251.0" />
       <ChoiceBox fx:id="eye_selector" layoutX="413.0" layoutY="201.0" prefWidth="150.0" AnchorPane.bottomAnchor="174.0" AnchorPane.leftAnchor="413.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="201.0" />
       <ChoiceBox fx:id="country_selector" layoutX="413.0" layoutY="150.0" prefWidth="150.0" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="413.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="150.0" />
-      <TextField fx:id="locationY_field" layoutX="37.0" layoutY="201.0" promptText="\%locationY_field" AnchorPane.bottomAnchor="174.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="414.0" AnchorPane.topAnchor="201.0" />
-      <TextField fx:id="locationX_field" layoutX="37.0" layoutY="150.0" promptText="\%locationX_field" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="414.0" AnchorPane.topAnchor="150.0" />
-      <TextField fx:id="locationZ_field" layoutX="37.0" layoutY="251.0" promptText="\%locationZ_field" />
-      <Button layoutX="226.0" layoutY="328.0" mnemonicParsing="false" onAction="#removeLowerAction" prefHeight="25.0" prefWidth="149.0" text="\%removeLower_button" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="328.0" />
+      <TextField fx:id="locationY_field" layoutX="37.0" layoutY="201.0" promptText="%main_menu.table.Y" AnchorPane.bottomAnchor="174.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="414.0" AnchorPane.topAnchor="201.0" />
+      <TextField fx:id="locationX_field" layoutX="37.0" layoutY="150.0" promptText="%main_menu.table.X" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="414.0" AnchorPane.topAnchor="150.0" />
+      <TextField fx:id="locationZ_field" layoutX="37.0" layoutY="251.0" promptText="%add_menu.text.coordinates" />
+      <Button layoutX="226.0" layoutY="328.0" mnemonicParsing="false" onAction="#removeLowerAction" prefHeight="25.0" prefWidth="149.0" text="%main_menu.command_button.remove_button" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="328.0" />
    </children>
 </AnchorPane>

@@ -63,13 +63,13 @@ public class MainController extends  AbstractController implements Initializable
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setResourceBundle(resourceBundle);
         language_selector.setItems(FXCollections.observableArrayList(Stream.of(LanguagesEnum.values()).collect(Collectors.toList())));
-        language_selector.setValue(mainModel.getLanguage(getResourceBundle().getLocale().getLanguage()));
+        language_selector.setValue(LanguagesEnum.lg);
         language_selector.getSelectionModel().selectedItemProperty().addListener((m, oldValue, newValue) -> {
             try {
                 setResourceBundle(ResourceBundle.getBundle("localization.locale", new Locale(newValue.getLanguageName())));
+                LanguagesEnum.lg = newValue;
                 switchScene(PathToViews.MAIN_VIEW,
                         param -> new MainController(mainModel.getClientSocketChannelIO(), mainModel.getSession(), currentVisual), getResourceBundle());
-                language_selector.setValue(newValue);
             } catch (ExceptionWithAlert e) {
                 e.showAlert();
             }

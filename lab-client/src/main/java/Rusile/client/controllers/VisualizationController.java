@@ -10,10 +10,7 @@ import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 import java.net.URL;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ResourceBundle;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class VisualizationController extends AbstractDataController implements Initializable {
@@ -49,7 +46,7 @@ public class VisualizationController extends AbstractDataController implements I
     @Override
     public void initializeElements(Set<Person> personSet, List<Long> usersIDs) {
         for (Person m : personSet) {
-            addToVisual(m, !usersIDs.contains(m.getId()));
+            addToVisual(m, true);
         }
     }
 
@@ -57,6 +54,7 @@ public class VisualizationController extends AbstractDataController implements I
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         setResourceBundle(resources);
+        initializeElements(getMainController().getMainModel().getPersons(), new ArrayList<>());
     }
 
     public void removeFromVisual(Person person) {

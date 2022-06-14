@@ -22,6 +22,15 @@ public class TableModel extends AbstractModel {
 
     private final TableController tableController;
     private final Session session;
+    private boolean isPolling = false;
+
+    public void setPolling(boolean polling) {
+        isPolling = polling;
+    }
+
+    public boolean isPolling() {
+        return isPolling;
+    }
 
     public TableModel(ClientSocketChannelIO clientSocketChannelIO, Stage currentStage, TableController tableController, Session session) {
         super(clientSocketChannelIO, currentStage);
@@ -38,24 +47,26 @@ public class TableModel extends AbstractModel {
             getClientSocketChannelIO().send(request);
             Response response = (Response) getClientSocketChannelIO().receive();
             //response.getCollectionToResponse().forEach(System.out::println);
-            response.getCollectionToResponse().
-                    forEach(val -> tableRows.add(
-                            new TableRow(
-                                    Math.toIntExact(val.getId()),
-                                    val.getName(),
-                                    val.getCoordinates().getX(),
-                                    val.getCoordinates().getY(),
-                                    val.getCreationDate(),
-                                    val.getHeight(),
-                                    val.getEyeColor(),
-                                    val.getHairColor(),
-                                    val.getNationality(),
-                                    val.getLocation().getX(),
-                                    val.getLocation().getY(),
-                                    val.getLocation().getZ(),
-                                    val.getLocation().getName()
-                            )
-                    ));
+            if (response.getCollectionToResponse() != null) {
+                response.getCollectionToResponse().
+                        forEach(val -> tableRows.add(
+                                new TableRow(
+                                        Math.toIntExact(val.getId()),
+                                        val.getName(),
+                                        val.getCoordinates().getX(),
+                                        val.getCoordinates().getY(),
+                                        val.getCreationDate(),
+                                        val.getHeight(),
+                                        val.getEyeColor(),
+                                        val.getHairColor(),
+                                        val.getNationality(),
+                                        val.getLocation().getX(),
+                                        val.getLocation().getY(),
+                                        val.getLocation().getZ(),
+                                        val.getLocation().getName()
+                                )
+                        ));
+            }
             return tableRows;
         } catch (Exception e) {
             e.printStackTrace();

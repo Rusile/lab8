@@ -10,14 +10,14 @@
    <children>
       <AnchorPane prefHeight="69.0" prefWidth="340.0" style="-fx-background-color: #0e3348;">
          <children>
-            <Label fx:id="removeById_title" alignment="CENTER" layoutX="147.0" layoutY="23.0" text="\%removeById_title" textFill="#fafafa" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="23.0">
+            <Label fx:id="removeById_title" alignment="CENTER" layoutX="147.0" layoutY="23.0" text="%remove_by_id.button.remove" textFill="#fafafa" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="23.0">
                <font>
                   <Font name="Segoe UI Bold Italic" size="18.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <TextField fx:id="removeById_field" layoutX="96.0" layoutY="99.0" promptText="\%removeById_button" />
-      <Button fx:id="removeById_button" layoutX="127.0" layoutY="152.0" mnemonicParsing="false" onAction="#removeByIdAction" prefHeight="25.0" prefWidth="86.0" text="\%removeById_button" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="127.0" AnchorPane.rightAnchor="127.0" AnchorPane.topAnchor="152.0" />
+      <TextField fx:id="removeById_field" layoutX="96.0" layoutY="99.0" promptText="%remove_by_id.button.remove" />
+      <Button fx:id="removeById_button" layoutX="127.0" layoutY="152.0" mnemonicParsing="false" onAction="#removeByIdAction" prefHeight="25.0" prefWidth="86.0" text="%remove_by_id.button.remove" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="127.0" AnchorPane.rightAnchor="127.0" AnchorPane.topAnchor="152.0" />
    </children>
 </AnchorPane>

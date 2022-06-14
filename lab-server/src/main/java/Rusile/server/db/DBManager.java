@@ -122,8 +122,8 @@ public class DBManager {
     public boolean updateById(Person person, Long id, String username) throws DatabaseException {
             return dbConnector.handleQuery((Connection connection) -> {
                 connection.createStatement().execute("BEGIN TRANSACTION;");
-                String updateQuery = "UPDATE s335091people"
-                        + "SET creationDate = ?,"
+                String updateQuery = "UPDATE s335091people "
+                        + "SET creationDate = ?, "
                         + "name = ?, "
                         + "x = ?, "
                         + "y = ?, "
@@ -131,10 +131,10 @@ public class DBManager {
                         + "loc_x = ?, "
                         + "loc_y = ?, "
                         + "loc_z = ?, "
-                        + "loc_name = ?,"
-                        + "eyeColor = ?,"
-                        + "hairColor = ?,"
-                        + "nationality = ?"
+                        + "loc_name = ?, "
+                        + "eyeColor = ?, "
+                        + "hairColor = ?, "
+                        + "nationality = ? "
                         + "FROM s335091users "
                         + "WHERE s335091people.id = ? "
                         + "AND s335091people.owner_id = s335091users.id AND s335091users.login = ?;";
@@ -157,10 +157,10 @@ public class DBManager {
                 preparedStatement.setLong(13, id);
                 preparedStatement.setString(14, username);
 
-                int updatedRows = preparedStatement.executeUpdate();
+                preparedStatement.executeUpdate();
                 connection.createStatement().execute("COMMIT;");
 
-                return updatedRows > 0;
+                return true;
             });
     }
 
