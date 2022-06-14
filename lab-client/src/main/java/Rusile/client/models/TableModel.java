@@ -1,4 +1,4 @@
-package Rusile.client.models;
-
-public class TableModel {
-}
+//package Rusile.client.models;
+//
+//public class TableModel {
+//}

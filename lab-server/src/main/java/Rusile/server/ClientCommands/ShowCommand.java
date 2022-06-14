@@ -1,6 +1,7 @@
     package Rusile.server.ClientCommands;
 
     import Rusile.common.exception.DatabaseException;
+    import Rusile.common.util.CollectionResponse;
     import Rusile.common.util.Request;
     import Rusile.common.util.Response;
     import Rusile.server.db.DBManager;
@@ -30,9 +31,9 @@
                         return new Response("Collection is empty!");
                     } else {
                         List<Long> ids = dbManager.getIdsOfUsersElements(request.getLogin());
-                        return new Response("Elements of collection:",
-                                collectionManager.getUsersElements(ids),
-                                collectionManager.getAlienElements(ids));
+                        return new CollectionResponse("Elements of collection:",
+                                collectionManager.getCollection(),
+                                collectionManager.getIds());
                     }
                 } else {
                     return new Response("Login and password mismatch");

@@ -22,7 +22,7 @@ public class ConnectionValidator {
     public static Integer validatePort(String port) throws IllegalArgumentException {
         int portNum = -1;
         try {
-            if ("".equals(port)) {
+            if ("".equals(port) || port.length() > 5) {
                 throw new IllegalArgumentException();
             }
             portNum = Integer.parseInt(port);
@@ -36,18 +36,21 @@ public class ConnectionValidator {
     }
 
     public static Pair<List<String>, SocketChannel> validateConnection(String address, String port) {
+        boolean test = true;
         List<String> errorList = new ArrayList<>();
         try {
             validateAddress(address);
         } catch (IllegalArgumentException e) {
+            test = false;
             errorList.add(e.getMessage());
         }
         try {
             validatePort(port);
         } catch (IllegalArgumentException e) {
+            test = false;
             errorList.add(e.getMessage());
         }
-        if (!address.equals("") && !port.equals("")) {
+        if (!address.equals("") && !port.equals("") && test) {
             try {
                 int intPort = Integer.parseInt(port);
                 SocketChannel channel = SocketChannel.open(new InetSocketAddress(address, intPort));

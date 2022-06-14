@@ -9,6 +9,7 @@ import Rusile.client.util.PathToVisuals;
 import Rusile.client.util.Session;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -27,115 +28,29 @@ import java.util.stream.Stream;
 public class MainController extends  AbstractController implements Initializable {
 
     private final MainModel mainModel;
+    @FXML
+    public Button switchButton;
+    @FXML
+    public ChoiceBox<LanguagesEnum> language_selector;
+    @FXML
+    public Pane visualizationPane;
 
-    public MainController(ClientSocketChannelIO clientSocketChannelIO, Session session, PathToVisuals currentVisual) {
-        mainModel = new MainModel(clientSocketChannelIO, getCurrentStage(), session, this);
-        //this.currentVisual = currentVisual;
-    }
 
     private PathToVisuals currentVisual;
 
-    @FXML
-    private Pane visualizationPane;
+    protected AbstractDataController currentDataController;
 
-    @FXML
-    private ChoiceBox<LanguagesEnum> language_selector;
+    public MainController(ClientSocketChannelIO clientSocketChannelIO, Session session, PathToVisuals currentVisual) {
+        mainModel = new MainModel(clientSocketChannelIO, getCurrentStage(), session, this);
+        this.currentVisual = currentVisual;
+    }
 
-    @FXML
-    private Button applyFilter;
-
-    @FXML
-    private TableColumn<?, ?> coordinates;
-
-    @FXML
-    private TableColumn<?, ?> date;
-
-    @FXML
-    private ChoiceBox<?> dateFilter;
-
-    @FXML
-    private TableColumn<?, ?> eyeColor;
-
-    @FXML
-    private ChoiceBox<?> eyeColorFilter;
-
-    @FXML
-    private FlowPane filterPane;
-
-    @FXML
-    private TableColumn<?, ?> hairColor;
-
-    @FXML
-    private ChoiceBox<?> hairColorFilter;
-
-    @FXML
-    private TableColumn<?, ?> height;
-
-    @FXML
-    private TextField heightFilter;
-
-    @FXML
-    private TableColumn<?, ?> id;
-
-    @FXML
-    private TextField idFilter;
-
-    @FXML
-    private TableColumn<?, ?> location;
-
-    @FXML
-    private TableColumn<?, ?> location1;
-
-    @FXML
-    private TableColumn<?, ?> location2;
-
-    @FXML
-    private TableColumn<?, ?> locationName;
-
-    @FXML
-    private TableColumn<?, ?> locationX;
-
-    @FXML
-    private TableColumn<?, ?> locationY;
-
-    @FXML
-    private TableColumn<?, ?> locationZ;
-
-    @FXML
-    private TableView<?> mainTable;
-
-    @FXML
-    private TableColumn<?, ?> name;
-
-    @FXML
-    private TextField nameFilter;
-
-    @FXML
-    private TextField nameLocationFilter;
-
-    @FXML
-    private TableColumn<?, ?> nationality;
-
-    @FXML
-    private ChoiceBox<?> nationalityFilter;
-
-    @FXML
-    private TextField xFilter;
-
-    @FXML
-    private TextField xLocationFilter;
-
-    @FXML
-    private TextField yLocationFilter;
-
-    @FXML
-    private TextField zLocationFilter;
 
     @FXML
     void addAction() {
         try {
             showPopUpStage(PathToViews.ADD_VIEW,
-                    param -> new AddController(mainModel.getClientSocketWorker(),
+                    param -> new AddController(mainModel.getClientSocketChannelIO(),
                             mainModel.getSession(),
                             mainModel),
                     getResourceBundle().getString("add_menu.title"),
@@ -154,7 +69,7 @@ public class MainController extends  AbstractController implements Initializable
             try {
                 setResourceBundle(ResourceBundle.getBundle("localization.locale", new Locale(newValue.getLanguageName())));
                 switchScene(PathToViews.MAIN_VIEW,
-                        param -> new MainController(mainModel.getClientSocketChannelIO(), mainModel.getSession()), getResourceBundle());
+                        param -> new MainController(mainModel.getClientSocketChannelIO(), mainModel.getSession(), currentVisual), getResourceBundle());
                 language_selector.setValue(newValue);
             } catch (ExceptionWithAlert e) {
                 e.showAlert();
@@ -179,19 +94,81 @@ public class MainController extends  AbstractController implements Initializable
             currentVisual = pathToVisuals;
             Parent parent = loader.load();
             currentDataController = loader.getController();
-            mainModel.initializeCollection();
+            //mainModel.initializeCollection();
             targetPane.getChildren().clear();
             targetPane.getChildren().add(parent);
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (ExceptionWithAlert e) {
-            if (e.isFatal()) {
-                e.showAlert();
-                mainModel.prepareForExit();
-                Platform.exit();
-            } else {
-                e.showAlert();
-            }
         }
+//        catch (ExceptionWithAlert e) {
+//            if (e.isFatal()) {
+//                e.showAlert();
+//                mainModel.prepareForExit();
+//                Platform.exit();
+//            } else {
+//                e.showAlert();
+//            }
+//        }
+    }
+
+    @FXML
+    public void switchView() {
+        if (currentVisual.equals(PathToVisuals.VISUALIZATION_VIEW)) {
+            loadDataVisualization(PathToVisuals.TABLE_VIEW, visualizationPane);
+        } else {
+            loadDataVisualization(PathToVisuals.VISUALIZATION_VIEW, visualizationPane);
+        }
+    }
+
+    @FXML
+    public void logout() {
+        try {
+            switchScene(PathToViews.LOGIN_VIEW,
+                    param -> new LoginController(mainModel.getClientSocketChannelIO()),
+                    getResourceBundle());
+        } catch (ExceptionWithAlert e) {
+            e.showAlert();
+        }
+    }
+
+
+    public MainModel getMainModel() {
+        return mainModel;
+    }
+
+    public void removeById() {
+        try {
+            showPopUpStage(PathToViews.REMOVE_BY_ID_VIEW,
+                    param -> new RemoveByIdController(mainModel.getClientSocketChannelIO(),
+                            mainModel.getSession(),
+                            mainModel),
+                    getResourceBundle().getString("remove_by_id.title"),
+                    getResourceBundle());
+        } catch (ExceptionWithAlert e) {
+            e.showAlert();
+        }
+    }
+
+    public void removeLower() {
+        try {
+            showPopUpStage(PathToViews.REMOVE_LOWER_VIEW,
+                    param -> new RemoveLowerController(mainModel.getClientSocketChannelIO(),
+                            mainModel.getSession(),
+                            mainModel),
+                    getResourceBundle().getString("add_menu.title"),
+                    getResourceBundle());
+        } catch (ExceptionWithAlert e) {
+            e.showAlert();
+        }
+    }
+
+    public void clear() {
+        //mainModel.processClearAction();
+        //mainModel.getNewCollection();
+    }
+
+    public void exit() {
+        mainModel.prepareForExit();
+        Platform.exit();
     }
 }

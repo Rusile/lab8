@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class AbstractController {
+public abstract class AbstractController {
 
     private Stage currentStage;
     private ResourceBundle resourceBundle;

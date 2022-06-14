@@ -7,9 +7,7 @@ import Rusile.common.util.Serializers;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
-import java.nio.channels.Channel;
 import java.nio.channels.SocketChannel;
-import java.nio.channels.UnresolvedAddressException;
 
 public class ClientSocketChannelIO implements IOController {
     private SocketChannel channel;

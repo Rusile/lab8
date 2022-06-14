@@ -3,6 +3,7 @@ Rusile\common\interfaces\Data.class
 Rusile\common\exception\NoAccessToFileException.class
 Rusile\common\exception\PersonNotMinException.class
 Rusile\common\exception\CollectionIsEmptyException.class
+Rusile\common\util\CollectionResponse.class
 Rusile\common\interfaces\IOController.class
 Rusile\common\util\RequestType.class
 Rusile\common\exception\DisconnectInitException.class

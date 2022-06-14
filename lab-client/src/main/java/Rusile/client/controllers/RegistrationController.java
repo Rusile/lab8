@@ -16,6 +16,7 @@ import Rusile.client.models.RegistrationModel;
 import Rusile.client.networkManager.ClientSocketChannelIO;
 import Rusile.client.util.LanguagesEnum;
 import Rusile.client.util.PathToViews;
+import Rusile.client.util.PathToVisuals;
 import Rusile.client.util.Session;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -60,7 +61,8 @@ public class RegistrationController extends AbstractController implements Initia
             Session session = registrationModel.processRegistration(login_field.getText(),
                     first_password_field.getText(),
                     second_password_field.getText());
-           // switchScene(PathToViews.MAIN_VIEW, param -> new MainController(registrationModel.getClientSocketWorker(), session, PathToVisuals.TABLE_VIEW), getResourceBundle());
+            if (session.getPassword() != null)
+            switchScene(PathToViews.MAIN_VIEW, param -> new MainController(registrationModel.getClientSocketChannelIO(), session, PathToVisuals.TABLE_VIEW), getResourceBundle());
         } catch (ExceptionWithAlert e) {
             if (e.isFatal()) {
                 e.showAlert();

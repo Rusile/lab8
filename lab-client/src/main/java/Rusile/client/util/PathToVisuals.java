@@ -1,7 +1,7 @@
 package Rusile.client.util;
 
 public enum PathToVisuals {
-    TABLE_VIEW("/fxml/table_i.fxml"),
+    TABLE_VIEW("/fxml/table.fxml"),
     VISUALIZATION_VIEW("/fxml/visualization.fxml");
 
     private final String path;

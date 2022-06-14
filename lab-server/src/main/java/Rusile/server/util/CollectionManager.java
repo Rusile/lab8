@@ -29,6 +29,12 @@ public class CollectionManager {
         }
     }
 
+    public Deque<Long> getIds() {
+        return peopleCollection.stream()
+                .map(Person::getId)
+                .collect(Collectors.toCollection(ArrayDeque<Long>::new));
+    }
+
 
     /**
      * @return The collecton itself.

@@ -42,7 +42,9 @@ public class Person implements Comparable<Person>, Serializable {
      * @param nationality - person's nationality
      * @param location - person's location
      */
-    public Person(Long id, String name, Coordinates coordinates, LocalDateTime creationDate, int height, Color eyeColor, Color hairColor, Country nationality, Location location) {
+    public Person(Long id, String name, Coordinates coordinates,
+                  LocalDateTime creationDate, int height, Color eyeColor,
+                  Color hairColor, Country nationality, Location location) {
         this.id = id;
         this.name = name;
         this.coordinates = coordinates;

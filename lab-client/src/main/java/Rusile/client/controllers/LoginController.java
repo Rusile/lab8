@@ -15,6 +15,7 @@ import Rusile.client.models.LoginModel;
 import Rusile.client.networkManager.ClientSocketChannelIO;
 import Rusile.client.util.LanguagesEnum;
 import Rusile.client.util.PathToViews;
+import Rusile.client.util.PathToVisuals;
 import Rusile.client.util.Session;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -76,7 +77,8 @@ public class LoginController extends AbstractController implements Initializable
         try {
             Session session = loginModel.processLogin(login_field.getText(),
                     password_field.getText());
-            //switchScene(PathToViews.MAIN_VIEW, param -> new MainController(loginModel.getClientSocketWorker(), session, PathToVisuals.TABLE_VIEW), getResourceBundle());
+            if (session.getPassword() != null)
+            switchScene(PathToViews.MAIN_VIEW, param -> new MainController(loginModel.getClientSocketChannelIO(), session, PathToVisuals.TABLE_VIEW), getResourceBundle());
         } catch (ExceptionWithAlert e) {
             if (e.isFatal()) {
                 e.showAlert();
