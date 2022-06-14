@@ -83,6 +83,7 @@ public class AddController extends AbstractController implements Initializable {
                     country_selector.getValue());
             getCurrentStage().close();
         } catch (FieldsValidationException e) {
+
             showFieldsErrors(e.getErrorList(), textFields);
         }
     }

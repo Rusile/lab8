@@ -9,13 +9,12 @@ import Rusile.client.util.PathToVisuals;
 import Rusile.client.util.Session;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.control.*;
-import javafx.scene.layout.FlowPane;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
@@ -163,8 +162,8 @@ public class MainController extends  AbstractController implements Initializable
     }
 
     public void clear() {
-        //mainModel.processClearAction();
-        //mainModel.getNewCollection();
+        mainModel.processClearAction();
+       // mainModel.getNewCollection();
     }
 
     public void exit() {

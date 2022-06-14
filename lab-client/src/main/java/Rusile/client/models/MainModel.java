@@ -290,8 +290,6 @@ public class MainModel extends AbstractModel {
                 exceptionWithAlert.showAlert();
                 prepareForExit();
                 Platform.exit();
-            } else {
-                //currentController.getConnectionLabel().setText(currentController.getResourceBundle().getString("update_exception.failed"));
             }
         });
         return task;

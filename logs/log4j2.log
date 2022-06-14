@@ -71,3 +71,89 @@
 2022-06-14 07:02:07,854 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
 2022-06-14 07:02:07,855 ERROR R.s.ServerConfig [ForkJoinPool-1-worker-3] Client disconnected
 2022-06-14 07:02:07,856 ERROR R.s.ServerConfig [pool-3-thread-4] Problem with response serializing or sending
+2022-06-14 07:20:28,840 INFO R.s.ServerConfig [main] Server get connection from /127.0.0.1:7676
+2022-06-14 07:20:35,683 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 07:20:35,862 INFO R.s.ServerConfig [pool-3-thread-5] Server wrote response to client
+2022-06-14 07:20:37,112 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 07:20:37,287 INFO R.s.ServerConfig [pool-3-thread-5] Server wrote response to client
+2022-06-14 07:20:43,104 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 07:20:43,254 INFO R.s.ServerConfig [pool-3-thread-5] Server wrote response to client
+2022-06-14 07:21:28,327 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 07:21:28,711 INFO R.s.ServerConfig [pool-3-thread-5] Server wrote response to client
+2022-06-14 07:22:10,466 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 07:22:10,712 INFO R.s.ServerConfig [pool-3-thread-5] Server wrote response to client
+2022-06-14 07:22:16,157 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 07:22:16,228 INFO R.s.ServerConfig [pool-3-thread-5] Server wrote response to client
+2022-06-14 07:22:31,142 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 07:22:31,202 INFO R.s.ServerConfig [pool-3-thread-5] Server wrote response to client
+2022-06-14 07:22:31,516 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 07:22:31,572 INFO R.s.ServerConfig [pool-3-thread-5] Server wrote response to client
+2022-06-14 07:24:01,721 ERROR R.s.ServerConfig [Thread-5] Invalid input!
+2022-06-14 07:27:07,975 INFO R.s.ServerConfig [main] Socket opened
+2022-06-14 07:27:16,853 INFO R.s.ServerConfig [main] Server started
+2022-06-14 07:27:16,853 INFO R.s.ServerConfig [Thread-5] Console thread is running
+2022-06-14 07:27:21,796 INFO R.s.ServerConfig [main] Server get connection from /127.0.0.1:5656
+2022-06-14 07:27:41,276 INFO R.s.ServerConfig [main] Client /127.0.0.1:5656 sent message
+2022-06-14 07:27:41,455 INFO R.s.ServerConfig [pool-3-thread-1] Server wrote response to client
+2022-06-14 07:27:43,225 INFO R.s.ServerConfig [main] Client /127.0.0.1:5656 sent message
+2022-06-14 07:27:43,401 INFO R.s.ServerConfig [pool-3-thread-1] Server wrote response to client
+2022-06-14 07:29:31,768 INFO R.s.ServerConfig [main] Client /127.0.0.1:5656 sent message
+2022-06-14 08:35:04,260 INFO R.s.ServerConfig [main] Server get connection from /127.0.0.1:5656
+2022-06-14 08:35:29,946 INFO R.s.ServerConfig [main] Client /127.0.0.1:5656 sent message
+2022-06-14 08:35:31,997 INFO R.s.ServerConfig [pool-3-thread-2] Server wrote response to client
+2022-06-14 08:35:41,571 ERROR R.s.ServerConfig [Thread-5] Invalid input!
+2022-06-14 08:36:12,273 INFO R.s.ServerConfig [main] Socket opened
+2022-06-14 08:36:16,917 INFO R.s.ServerConfig [main] Server started
+2022-06-14 08:36:16,918 INFO R.s.ServerConfig [Thread-5] Console thread is running
+2022-06-14 08:37:28,697 INFO R.s.ServerConfig [main] Server get connection from /127.0.0.1:5656
+2022-06-14 08:37:39,935 INFO R.s.ServerConfig [main] Client /127.0.0.1:5656 sent message
+2022-06-14 08:37:40,152 INFO R.s.ServerConfig [pool-3-thread-1] Server wrote response to client
+2022-06-14 08:37:42,307 INFO R.s.ServerConfig [main] Client /127.0.0.1:5656 sent message
+2022-06-14 08:37:42,511 INFO R.s.ServerConfig [pool-3-thread-1] Server wrote response to client
+2022-06-14 08:37:56,058 INFO R.s.ServerConfig [main] Client /127.0.0.1:5656 sent message
+2022-06-14 08:37:56,607 INFO R.s.ServerConfig [pool-3-thread-1] Server wrote response to client
+2022-06-14 08:50:45,471 ERROR R.s.ServerConfig [Thread-5] Invalid input!
+2022-06-14 08:51:32,210 INFO R.s.ServerConfig [main] Socket opened
+2022-06-14 08:52:24,101 INFO R.s.ServerConfig [main] Server started
+2022-06-14 08:52:24,109 INFO R.s.ServerConfig [Thread-5] Console thread is running
+2022-06-14 08:53:12,762 INFO R.s.ServerConfig [main] Server get connection from /127.0.0.1:4545
+2022-06-14 08:53:28,487 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 08:53:28,664 INFO R.s.ServerConfig [pool-3-thread-1] Server wrote response to client
+2022-06-14 08:53:30,402 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 08:53:30,707 INFO R.s.ServerConfig [pool-3-thread-1] Server wrote response to client
+2022-06-14 08:57:52,526 INFO R.s.ServerConfig [main] Server get connection from /127.0.0.1:4545
+2022-06-14 08:58:02,646 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 08:58:02,824 INFO R.s.ServerConfig [pool-3-thread-2] Server wrote response to client
+2022-06-14 08:58:04,857 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 08:58:05,025 INFO R.s.ServerConfig [pool-3-thread-2] Server wrote response to client
+2022-06-14 08:58:08,779 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 08:58:08,821 INFO R.s.ServerConfig [pool-3-thread-2] Server wrote response to client
+2022-06-14 08:58:20,776 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 08:58:21,296 INFO R.s.ServerConfig [pool-3-thread-2] Server wrote response to client
+2022-06-14 08:59:07,006 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 08:59:07,161 INFO R.s.ServerConfig [pool-3-thread-2] Server wrote response to client
+2022-06-14 08:59:53,977 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 08:59:54,174 INFO R.s.ServerConfig [pool-3-thread-2] Server wrote response to client
+2022-06-14 09:00:39,356 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 09:00:39,785 INFO R.s.ServerConfig [pool-3-thread-2] Server wrote response to client
+2022-06-14 09:03:58,797 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 09:03:58,975 INFO R.s.ServerConfig [pool-3-thread-3] Server wrote response to client
+2022-06-14 09:03:59,270 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 09:03:59,486 INFO R.s.ServerConfig [pool-3-thread-3] Server wrote response to client
+2022-06-14 09:07:49,758 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 09:07:49,761 ERROR R.s.ServerConfig [ForkJoinPool-1-worker-0] Client disconnected
+2022-06-14 09:07:49,766 ERROR R.s.ServerConfig [pool-3-thread-4] Problem with response serializing or sending
+2022-06-14 09:07:55,688 INFO R.s.ServerConfig [main] Server get connection from /127.0.0.1:4545
+2022-06-14 09:08:12,286 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 09:08:12,399 INFO R.s.ServerConfig [pool-3-thread-4] Server wrote response to client
+2022-06-14 09:08:13,806 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 09:08:13,967 INFO R.s.ServerConfig [pool-3-thread-4] Server wrote response to client
+2022-06-14 09:08:31,021 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 09:08:31,615 INFO R.s.ServerConfig [pool-3-thread-4] Server wrote response to client
+2022-06-14 09:08:34,208 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 09:08:34,361 INFO R.s.ServerConfig [pool-3-thread-4] Server wrote response to client
+2022-06-14 09:08:36,644 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 09:08:36,824 INFO R.s.ServerConfig [pool-3-thread-4] Server wrote response to client
+2022-06-14 09:08:45,958 INFO R.s.ServerConfig [main] Client /127.0.0.1:4545 sent message
+2022-06-14 09:08:45,958 ERROR R.s.ServerConfig [ForkJoinPool-1-worker-3] Client disconnected
+2022-06-14 09:08:45,958 ERROR R.s.ServerConfig [pool-3-thread-4] Problem with response serializing or sending

@@ -19,10 +19,10 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button fx:id="register_button" onAction="#registerAction" layoutX="390.0" layoutY="289.0" mnemonicParsing="false" text="Register" AnchorPane.bottomAnchor="86.0" AnchorPane.leftAnchor="390.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="289.0" />
+      <Button fx:id="register_button" layoutX="325.0" layoutY="289.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="36.0" prefWidth="125.0" text="Register" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="325.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="289.0" />
       <TextField fx:id="login_field" alignment="CENTER" layoutX="150.0" layoutY="170.0" minHeight="20.0" minWidth="100.0" prefHeight="30.0" prefWidth="300.0" promptText="Login" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="170.0" />
-      <Button fx:id="login_button" onAction="#loginAction" layoutX="150.0" layoutY="289.0" mnemonicParsing="false" text="Login" AnchorPane.bottomAnchor="86.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="390.0" AnchorPane.topAnchor="289.0" />
+      <Button fx:id="login_button" layoutX="150.0" layoutY="289.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="36.0" prefWidth="125.0" text="Login" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="325.0" AnchorPane.topAnchor="289.0" />
       <PasswordField fx:id="password_field" alignment="CENTER" layoutX="150.0" layoutY="226.0" prefHeight="30.0" prefWidth="300.0" promptText="Password" AnchorPane.bottomAnchor="144.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="226.0" />
-      <ChoiceBox fx:id="language_selector" layoutX="225.0" layoutY="337.0" prefWidth="150.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="337.0" />
+      <ChoiceBox fx:id="language_selector" layoutX="225.0" layoutY="351.0" prefHeight="36.0" prefWidth="145.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="351.0" />
    </children>
 </AnchorPane>

@@ -2,9 +2,9 @@ package Rusile.client.util;
 
 public enum LanguagesEnum {
 
-    RUSSIAN("Русский", "ru"),
-    ICELANDIC("Icelandic", "is"),
-    SVENSKA("Svenska", "sv"),
+    ENGLISH("English", "en"),
+    SLOVAK("Slovenský", "sk"),
+    LITHUANIAN("Lietuviškas", "lt"),
     SPANISH("Español", "es");
 
     private final String name;

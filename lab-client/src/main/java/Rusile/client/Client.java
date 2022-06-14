@@ -1,23 +1,7 @@
 package Rusile.client;
 
-import Rusile.client.CommandDispatcher.CommandListener;
-import Rusile.client.CommandDispatcher.CommandToSend;
-import Rusile.client.CommandDispatcher.CommandValidators;
-import Rusile.client.networkManager.AuthorizationModule;
-import Rusile.client.networkManager.ClientSocketChannelIO;
-import Rusile.client.networkManager.CommandRequestCreator;
-import Rusile.common.exception.IllegalSizeOfScriptException;
-import Rusile.common.exception.WrongAmountOfArgumentsException;
-import Rusile.common.util.Request;
-import Rusile.common.util.Response;
-import Rusile.common.util.TextWriter;
-
-import java.io.IOException;
-import java.net.InetSocketAddress;
-import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
-import java.nio.channels.UnresolvedAddressException;
 import java.util.*;
 
 public final class Client {
@@ -35,7 +19,6 @@ public final class Client {
     private static Selector selector;
     private static SocketChannel clientChannel;
 
-    private static final CommandRequestCreator COMMAND_REQUEST_CREATOR = new CommandRequestCreator();
 
     private static boolean reconnectionMode = false;
     private static int attempts = 0;

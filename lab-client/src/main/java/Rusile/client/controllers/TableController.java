@@ -32,6 +32,9 @@ public class TableController extends AbstractDataController implements Initializ
     @FXML
     private Button applyFilter;
 
+    private URL url;
+    private ResourceBundle resourceBundle;
+
     @FXML
     private TableColumn<TableRow, ?> coordinates;
 
@@ -133,6 +136,8 @@ public class TableController extends AbstractDataController implements Initializ
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        this.url = url;
+        this.resourceBundle = resourceBundle;
         tableRows = tableModel.fillTableWithRemoteData();
         if (tableRows != null) {
             masterData.addAll(tableRows);
@@ -282,11 +287,11 @@ public class TableController extends AbstractDataController implements Initializ
 
     @Override
     public void updateElements(List<Person> elementsToAdd, List<Person> elementsToRemove, List<Person> elementsToUpdate, List<Long> usersIDs) {
-
+        initialize(url, resourceBundle);
     }
 
     @Override
     public void initializeElements(Set<Person> musicBandSet, List<Long> usersIDs) {
-
+        initialize(url, resourceBundle);
     }
 }

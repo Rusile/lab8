@@ -15,12 +15,12 @@ public class AbstractModel {
         //this.clientInfo = clientSocketChannelIO.getInetAddress().getAddress() + ":" + clientSocketChannelIO.getInetAddress().getPort();
     }
     public LanguagesEnum getLanguage(String s) {
-        if ("ru".equals(s)) {
-            return LanguagesEnum.RUSSIAN;
-        } else if ("is".equals(s)) {
-            return LanguagesEnum.ICELANDIC;
-        } else if ("sv".equals(s)) {
-            return LanguagesEnum.SVENSKA;
+        if ("en".equals(s)) {
+            return LanguagesEnum.ENGLISH;
+        } else if ("lt".equals(s)) {
+            return LanguagesEnum.LITHUANIAN;
+        } else if ("sk".equals(s)) {
+            return LanguagesEnum.SLOVAK;
         } else {
             return LanguagesEnum.SPANISH;
         }
@@ -34,7 +34,4 @@ public class AbstractModel {
         return currentStage;
     }
 
-    //public String getClientInfo() {
-    //    return clientInfo;
-  //  }
 }
