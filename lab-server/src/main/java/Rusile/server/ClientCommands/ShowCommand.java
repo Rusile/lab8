@@ -31,9 +31,8 @@
                         return new Response("Collection is empty!");
                     } else {
                         List<Long> ids = dbManager.getIdsOfUsersElements(request.getLogin());
-                        return new CollectionResponse("Elements of collection:",
-                                collectionManager.getCollection(),
-                                collectionManager.getIds());
+                        return new Response("Elements of collection:",
+                                collectionManager.getCollection());
                     }
                 } else {
                     return new Response("Login and password mismatch");

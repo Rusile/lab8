@@ -88,7 +88,7 @@ public class MainController extends  AbstractController implements Initializable
                 loader.setControllerFactory(param -> new VisualizationController(this));
                 switchButton.setText(getResourceBundle().getString("main_menu.button.switch_to_table"));
             } else if (pathToVisuals.equals(PathToVisuals.TABLE_VIEW)) {
-                loader.setControllerFactory(param -> new TableController(this));
+                loader.setControllerFactory(param -> new TableController(mainModel.getClientSocketChannelIO(), mainModel.getSession(), this));
                 switchButton.setText(getResourceBundle().getString("main_menu.button.switch_to_visual"));
             }
             currentVisual = pathToVisuals;

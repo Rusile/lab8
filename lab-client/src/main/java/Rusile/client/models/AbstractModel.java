@@ -6,8 +6,8 @@ import javafx.stage.Stage;
 
 public class AbstractModel {
     //private final String clientInfo;
-    private final ClientSocketChannelIO clientSocketChannelIO;
-    private final Stage currentStage;
+    protected final ClientSocketChannelIO clientSocketChannelIO;
+    protected final Stage currentStage;
 
     public AbstractModel(ClientSocketChannelIO clientSocketChannelIO, Stage currentStage) {
         this.clientSocketChannelIO = clientSocketChannelIO;

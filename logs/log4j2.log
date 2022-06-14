@@ -37,3 +37,37 @@
 2022-06-14 06:17:43,259 INFO R.s.ServerConfig [pool-3-thread-6] Server wrote response to client
 2022-06-14 06:18:03,790 INFO R.s.ServerConfig [main] Client /127.0.0.1:7474 sent message
 2022-06-14 06:18:03,830 INFO R.s.ServerConfig [pool-3-thread-6] Server wrote response to client
+2022-06-14 06:50:53,415 INFO R.s.ServerConfig [main] Socket opened
+2022-06-14 06:50:59,879 INFO R.s.ServerConfig [main] Server started
+2022-06-14 06:50:59,879 INFO R.s.ServerConfig [Thread-5] Console thread is running
+2022-06-14 06:51:03,918 INFO R.s.ServerConfig [main] Server get connection from /127.0.0.1:7676
+2022-06-14 06:51:22,604 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 06:51:22,774 INFO R.s.ServerConfig [pool-3-thread-1] Server wrote response to client
+2022-06-14 06:51:24,333 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 06:51:24,437 INFO R.s.ServerConfig [pool-3-thread-1] Server wrote response to client
+2022-06-14 06:56:31,446 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 06:56:31,448 ERROR R.s.ServerConfig [ForkJoinPool-1-worker-2] Client disconnected
+2022-06-14 06:56:31,452 ERROR R.s.ServerConfig [pool-3-thread-2] Problem with response serializing or sending
+2022-06-14 06:59:00,929 INFO R.s.ServerConfig [main] Server get connection from /127.0.0.1:7676
+2022-06-14 06:59:08,159 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 06:59:08,247 INFO R.s.ServerConfig [pool-3-thread-3] Server wrote response to client
+2022-06-14 06:59:09,476 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 06:59:09,621 INFO R.s.ServerConfig [pool-3-thread-3] Server wrote response to client
+2022-06-14 06:59:50,778 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 06:59:51,035 INFO R.s.ServerConfig [pool-3-thread-3] Server wrote response to client
+2022-06-14 06:59:56,910 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 06:59:57,164 INFO R.s.ServerConfig [pool-3-thread-3] Server wrote response to client
+2022-06-14 07:01:20,324 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 07:01:20,452 INFO R.s.ServerConfig [pool-3-thread-4] Server wrote response to client
+2022-06-14 07:01:23,784 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 07:01:24,019 INFO R.s.ServerConfig [pool-3-thread-4] Server wrote response to client
+2022-06-14 07:01:35,885 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 07:01:36,014 INFO R.s.ServerConfig [pool-3-thread-4] Server wrote response to client
+2022-06-14 07:01:37,384 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 07:01:37,509 INFO R.s.ServerConfig [pool-3-thread-4] Server wrote response to client
+2022-06-14 07:02:07,851 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 07:02:07,853 ERROR R.s.ServerConfig [ForkJoinPool-1-worker-3] Client disconnected
+2022-06-14 07:02:07,854 INFO R.s.ServerConfig [pool-3-thread-4] Server wrote response to client
+2022-06-14 07:02:07,854 INFO R.s.ServerConfig [main] Client /127.0.0.1:7676 sent message
+2022-06-14 07:02:07,855 ERROR R.s.ServerConfig [ForkJoinPool-1-worker-3] Client disconnected
+2022-06-14 07:02:07,856 ERROR R.s.ServerConfig [pool-3-thread-4] Problem with response serializing or sending

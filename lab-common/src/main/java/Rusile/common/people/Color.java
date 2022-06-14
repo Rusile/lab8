@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Enum of colors
@@ -27,9 +28,8 @@ public enum Color implements Serializable {
         }
         return nameList.substring(0, nameList.length() - 2);
     }
-    public static List<Color> arrayOfElements() {
-        List<Color> arr = new ArrayList<>(Arrays.asList(Color.values()));
-        return arr;
+    public static List<String> arrayOfElements() {
+        return Arrays.stream(Color.values()).map(Enum::name).collect(Collectors.toList());
     }
 
 }
